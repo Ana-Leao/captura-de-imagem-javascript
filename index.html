@@ -16,8 +16,12 @@
 			<div class="col-md-6">
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title">Validação Facial</h5>
-						<img src="video-off.svg" alt="" id="iconCameraDesligada" />
+						<h5 class="card-title text-center">Validação Facial</h5>
+						<div id="cameraDesligada" class="justify-content-center align-items-center flex-column">
+							<img src="video-off.svg" alt="" id="iconCameraDesligada" class="w-25"/>
+							<h3 class="text-center">Câmera desligada</h3>
+						</div>
+
 						<video id="video" hidden></video>
 					</div>
 					<div class="card-footer">
@@ -33,7 +37,7 @@
 						<h5 class="card-title">Resultado</h5>
 						<canvas id="canvas"></canvas>
 					</div>
-          <div class="card-footer">
+					<div class="card-footer">
 						<button id="capturarButton" type="button" class="btn btn-dark">
 							Download imagem
 						</button>

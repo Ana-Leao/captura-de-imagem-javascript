@@ -3,19 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const video = document.getElementById("video");
   const capturarButton = document.getElementById("capturarButton");
   const canvas = document.getElementById("canvas");
-  const iconCameraDesligada = document.getElementById("iconCameraDesligada");
+  const cameraDesligada = document.getElementById("cameraDesligada");
 
 
   navigator.mediaDevices.getUserMedia({video: true})
     .then((stream) => {
-      iconCameraDesligada.setAttribute("hidden", "true");
+      cameraDesligada.style.display = "none";
       video.removeAttribute("hidden");
       video.srcObject = stream;
       video.play();
       console.log(stream)
     })
     .catch((erro) => {
-      alert(erro);
+      cameraDesligada.style.display = "flex";
+      // alert(erro);
       console.log(erro);
     });
 
